@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script defer src="{% static 'pokedex/main.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'pokedex/style.css' %}">
+</head>
+<body>
+    {% include 'pokedex/_navbar.html' %}
+    <div id="app">
+        <div class="search-container" @blur="showDropdown = false">
+            <input type="text" v-model="pokemon_search" @focus="showDropdown = true">
+            <div v-if="showDropdown" class="search-dropdown">
+                <div v-for="pokemon in filteredPokemon">
+                    <a :href="`pokemon/${pokemon.id}`">
+                    <div>
+                        <img :src="pokemon.image_url" alt="">
+                    </div>
+                    <div>
+                            <h3>[[ pokemon.name ]]</h3>
+                            <div>
+                                <span v-for="type in pokemon.types">[[ type.name ]]</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

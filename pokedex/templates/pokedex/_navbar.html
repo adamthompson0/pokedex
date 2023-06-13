@@ -1,0 +1,14 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'pokedex/navbar.css' %}">
+<nav>
+    <img src="https://archives.bulbagarden.net/media/upload/4/4b/Pok%C3%A9dex_logo.png" alt="Pokedex">
+    <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        {% if request.user.is_authenticated %}
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+        {% else %}
+        <li><a href="{% url 'login' %}">Login</a></li>
+        <li><a href="{% url 'register' %}">Register</a></li>
+        {% endif %}
+    </ul>
+</nav>

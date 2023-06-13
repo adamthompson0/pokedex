@@ -1,0 +1,36 @@
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+nav img {
+    width: 100px;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    color: #F7D054;
+}
