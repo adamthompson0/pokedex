@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{% static 'pokedex/style.css' %}">
 </head>
 <body>
+    {% include 'pokedex/_navbar.html' %}
     <img src="{{ pokemon.image_url }}" alt="{{ pokemon.name }}">
     <h1><span>{{pokemon.number}}</span> {{ pokemon.name }}</h1>
     <section>
