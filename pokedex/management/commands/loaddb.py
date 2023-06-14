@@ -11,7 +11,7 @@ class Command(BaseCommand):
         Ability.objects.all().delete()
 
         # Get all pokemon from pokemonAPI
-        limit = 150
+        limit = 151
         all_pokemon_url = f"https://pokeapi.co/api/v2/pokemon/?limit={limit}"
         list_of_pokemon_urls = requests.get(all_pokemon_url).json()
 
