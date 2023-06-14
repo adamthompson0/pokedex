@@ -7,7 +7,7 @@
 
 1. Drop down needs styling
     1. Use the reference image to complete styling on the drop down
-    2. [Reference Image](./dropdown.png)
+    2. ![Reference Image](./dropdown.png)
 
 1. Pokemon detail page needs styling
    1. Use best judgement to style the pokemon detail page to match rest of application
@@ -21,7 +21,7 @@
 1. Homepage should display all pokemon
 
 1. Adjust spacing between navbar and page content
-   1. [reference image](./navbar.png)
+   1. ![reference image](./navbar.png)
 
 1. Documentation needs updating
    1. Update the project README.md to include all API routes
