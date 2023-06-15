@@ -13,6 +13,7 @@ body {
     position: relative;
     width: clamp(300px, 100%, 500px);
     margin: 0 auto;
+    padding: 10px;
 }
 
 .search-container input {
