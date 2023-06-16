@@ -1,52 +1,57 @@
-{% extends 'pokedex/base.html' %}
-
-{% block title %}
-{{pokemon.name}}
-{% endblock title %}
-
-
-{% block content %}
-<img src="{{ pokemon.image_url }}" alt="{{ pokemon.name }}">
-<h1><span>{{pokemon.number}}</span> {{ pokemon.name }}</h1>
-<section>
-    {% for type in pokemon.types.all %}
-        <span class="type {{type.name}}">{{ type.name }}</span>
-    {% endfor %}
-</section>
-<section>
-    <table>
-        <tr>
-            <th>Number</th>
-            <td>{{ pokemon.number }}</td>
-        </tr>
-        <tr>
-            <th>Height</th>
-            <td>{{ pokemon.height }}</td>
-        </tr>
-        <tr>
-            <th>Weight</th>
-            <td>{{ pokemon.weight }}</td>
-        </tr>
-        <tr>
-            <th>Types</th>
-            <td>{% for type in pokemon.types.all %}
-                <span>{{ type.name }}</span>
-            {% endfor %}</td>
-        </tr>
-    </table>
-</section>
-<section>
-    <table>
-        <tr>
-            <th>Ability</th>
-            <th>Effect</th>
-        </tr>
-        {% for ability in pokemon.abilities.all %}
-            <tr>
-                <td>{{ ability.name }}</td>
-                <td>{{ ability.effect }}</td>
-            </tr>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{pokemon.name}}</title>
+    <link rel="stylesheet" href="{% static 'pokedex/style.css' %}">
+</head>
+<body>
+    {% include 'pokedex/_navbar.html' %}
+    <img src="{{ pokemon.image_url }}" alt="{{ pokemon.name }}">
+    <h1><span>{{pokemon.number}}</span> {{ pokemon.name }}</h1>
+    <section>
+        {% for type in pokemon.types.all %}
+            <span class="type {{type.name}}">{{ type.name }}</span>
         {% endfor %}
-    </table>
-</section>
-{% endblock content %}
+    </section>
+    <section>
+        <table>
+            <tr>
+                <th>Number</th>
+                <td>{{ pokemon.number }}</td>
+            </tr>
+            <tr>
+                <th>Height</th>
+                <td>{{ pokemon.height }}</td>
+            </tr>
+            <tr>
+                <th>Weight</th>
+                <td>{{ pokemon.weight }}</td>
+            </tr>
+            <tr>
+                <th>Types</th>
+                <td>{% for type in pokemon.types.all %}
+                    <span>{{ type.name }}</span>
+                {% endfor %}</td>
+            </tr>
+        </table>
+    </section>
+    <section>
+        <table>
+            <tr>
+                <th>Ability</th>
+                <th>Effect</th>
+            </tr>
+            {% for ability in pokemon.abilities.all %}
+                <tr>
+                    <td>{{ ability.name }}</td>
+                    <td>{{ ability.effect }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </section>
+
+</body>
+</html>
