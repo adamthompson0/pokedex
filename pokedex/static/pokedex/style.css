@@ -3,12 +3,15 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family:'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
-    background-color: 
-    bor
+  
+}
+nav ul{
+  font-family: 'Pokemon Solid', sans-serif;
+
 }
 
 
@@ -39,7 +42,9 @@ body {
   border-radius: 2%;
   padding: 10px;
   justify-content: center;
-  
+}
+.grid-container h3{
+  color: white;
 }
 
 

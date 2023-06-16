@@ -15,13 +15,13 @@ Pokedex
                 </div>
                 <div>
                         <h3>[[ pokemon.name ]]</h3>
+                    </a>
                         <div>
                             <span v-for="type in pokemon.types">[[ type.name ]]</span>
                             <hr>
                         </div>
                     </div>
                 </div>
-            </a>
         </div>
     </div>
     <div class="grid-container">
@@ -31,7 +31,7 @@ Pokedex
                 <img :src="pokemon.image_url" alt="">
             </div>
             <div>
-                    <h3>[[ pokemon.name ]]</h3>
+                    <h3> [[ pokemon.number ]] [[ pokemon.name ]]</h3>
 
     </div>
 </div>
