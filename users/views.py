@@ -1,9 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.shortcuts import redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.decorators import login_required
+from pokedex.models import Team
 
 
 def login_view(request):
@@ -43,4 +44,23 @@ def register_view(request):
 
 @login_required(login_url='/users/login/')
 def profile_view(request):
-    return render(request, 'users/profile.html')
+    
+    team = Team.objects.all()
+    
+    context = {
+        'teams': team
+    }
+    
+    
+    
+    return render(request, 'users/profile.html', context)
+
+@login_required(login_url='/users/login/')
+def team(request, team_id):
+    team = get_object_or_404(Team, id=team_id)
+
+    context = {
+        "team": team
+    }
+    return render(request, 'pokedex/teams.html', context)
+

@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Pokemon, Type, Ability
+from .models import Pokemon, Type, Ability, Team
 
 
 class PokemonAdmin(admin.ModelAdmin):
@@ -20,3 +20,4 @@ class AbilityAdmin(admin.ModelAdmin):
 admin.site.register(Pokemon, PokemonAdmin)
 admin.site.register(Type, TypeAdmin)
 admin.site.register(Ability, AbilityAdmin)
+admin.site.register(Team)
