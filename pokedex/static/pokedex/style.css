@@ -3,15 +3,29 @@
 }
 
 body {
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: royalblue;
+    height: 100vh;
   
 }
 nav ul{
   font-family: 'Pokemon Solid', sans-serif;
 
+}
+.poke-info{
+  margin: auto;
+  border-top-width: 20px;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: auto;
+  border-radius: 2%;
+  padding: 10px;
+  justify-content: start;
+}
+.poke-img{
+  object-fit: cover;
 }
 
 
@@ -31,6 +45,9 @@ nav ul{
     font-size: 16px;
     outline: none;
 }
+.search-container span{
+  gap: 50px;
+}
 
 .grid-container{
   
@@ -45,6 +62,7 @@ nav ul{
 }
 .grid-container h3{
   color: white;
+  text-decoration-line: none;
 }
 
 
@@ -70,6 +88,7 @@ nav ul{
     display: flex;
     border-bottom: 1px solid #ccc;
     padding: 10px 15px;
+    
 }
 
 /* Pokemon types */

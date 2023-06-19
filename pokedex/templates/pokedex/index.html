@@ -17,7 +17,7 @@ Pokedex
                         <h3>[[ pokemon.name ]]</h3>
                     </a>
                         <div>
-                            <span v-for="type in pokemon.types">[[ type.name ]]</span>
+                            <span class="type" v-for="type in pokemon.types"> [[ type.name ]]</span>
                             <hr>
                         </div>
                     </div>
@@ -30,8 +30,10 @@ Pokedex
             <div>
                 <img :src="pokemon.image_url" alt="">
             </div>
+            <a/>
             <div>
-                    <h3> [[ pokemon.number ]] [[ pokemon.name ]]</h3>
+            <h3> [[ pokemon.number ]] [[ pokemon.name ]]</h3>
+        <ul/>
 
     </div>
 </div>
